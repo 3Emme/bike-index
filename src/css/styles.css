@@ -1,0 +1,30 @@
+.inverted{
+  font-family: 'Fredoka One', cursive;
+  background-color: black;
+  color:whitesmoke;
+}
+#bikeindexsubmit{
+  margin-top:100px;
+  margin-bottom:100px;
+}
+.jumbotron{
+  display:flex;
+  align-items:center;
+}
+.orange{
+  color:orange;
+}
+
+.mediumfont{
+  font-size:25px;
+}
+
+.results{
+  margin-left: 10%;
+  margin-right:10%;
+}
+.resultstitle{
+  font-weight:bolder;
+  margin-left: 10%;
+  margin-right:10%;
+}

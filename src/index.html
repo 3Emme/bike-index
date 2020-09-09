@@ -1,0 +1,63 @@
+<html lang="en-US">
+
+<head>
+  <title>find your bike</title>
+  <link href="https://fonts.googleapis.com/css2?family=F15oka+One&display=swap" rel="stylesheet">
+</head>
+<body class='inverted'>
+  <div class='fluid-container'>
+    <div class='showErrors'></div>
+    <div class='jumbotron inverted display-2 justify-content-center'>find your bike <iframe src="https://giphy.com/embed/26tn0ONYXTynFU3Be" width="200" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/woman-bike-ameliagiller-26tn0ONYXTynFU3Be"></a></p></div>
+      <div class="row">
+        <div class='col-4'>
+          <label for="location">Enter a location:</label>
+          <br>
+          <input id="location" type="text" class='form-control'>
+        </div>
+        <div class='col-4'>
+          <label for="color">Enter a color:</label>
+          <br>
+          <select class="form-control" id="colors">
+            <option value="red">red</option>
+            <option value="blue">blue</option>
+            <option value="green">green</option>
+            <option value="black">black</option>
+            <option value="silver">silver</option>
+          </select>
+        </div>
+        <div class='col-4'>
+          <label for="manufacturer">Enter a manufacturer:</label>
+          <br>
+          <input id="manufacturer" class='form-control' type="text">
+        </div>
+      </div>
+      <br>
+      <br>
+      <div class='row justify-content-center'>
+        <p class='mediumfont'>how many results?</p>
+        <div class='col-1'>
+          <select class="form-control" id="results">
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
+        </div>
+      
+      </div>
+
+      <div class='row justify-content-center'>
+        <button class="btn-success" id="bikeindexsubmit">Let's find your bike</button>
+      </div>
+      <div class='row justify-content-center'>
+        <div id='bikesfound'>
+          <p class='display-4 justify-content-center'></p>
+        </div>
+      </div>
+  </div>
+  
+  </div>
+
+  </div>
+</body>
+
+</html>
