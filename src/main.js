@@ -3,6 +3,7 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import BikeService from './bike-index.js';
+import MapQuestService from './map.js';
 
 // function displayBikeResults(bikeResponse) { 
 //   const body = JSON.parse(bikeResponse);
@@ -53,12 +54,25 @@ if(bikeResponse.bikes) {
     <p class='results'>Color: ${element.frame_colors.join(' and ')}</p> 
     <p class='results'>Description: ${element.description}</p>
     <p class='results'>Link to page: <A HREF='${element.url}'>${element.url}</A></p>
+    <img style="-webkit-user-select: none;margin: auto;" src="${stolenMap(element.stolen_location)}" width="400" height="400">
     </div>
     </br>`); 
+    
   });
 } else {
   $('.showErrors').text(`There was an error: ${bikeResponse.message}`);
 }
+}
+
+function stolenMap(stolenLocation){
+  if (!stolenLocation){
+    console.log(`stolenLocation is not valid. Value: ${stolenLocation}`)
+  } else{
+    MapQuestService.getMap(stolenLocation)
+          .then(function(mapResponse) {
+            return mapResponse;
+          });
+        } 
 }
 
   $(document).ready(function() {
