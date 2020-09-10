@@ -17,15 +17,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wattsjmichael/pigdice.git"
+    "url": "https://github.com/alleyesonme21/bike-index.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wattsjmichael/pigdice/issues"
+    "url": "https://github.com/alleyesonme21/bike-index/issues"
   },
-  "homepage": "https://github.com/wattsjmichael/pigdice#readme",
+  "homepage": "https://github.com/alleyesonme21/bike-index/blob/master/README.md",
   "devDependencies": {
     "@babel/core": "^7.6.4",
     "@babel/plugin-transform-modules-commonjs": "^7.6.0",
