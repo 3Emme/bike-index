@@ -1,33 +1,35 @@
-# *{Application Name}*
-
+# *find your bike*
 * * *
-*{Brief description of application}, September 9,2020*
+*A simple interface that allows users to specify search terms and look for their bike using the bike index api, September 9,2020*
 
 By ***Johnny Duverseau, Emme Buentiempo, AJ Markow***
 
 
 ## Description
 
-*{Description}*
+*A user inputs their location, color of their bike, and the brand of the bike.  The user also specifies the number of results to be returned.  The page returns a list of potential candidates with a summary and link to each.*
 
 
 ## Setup/Installation Requirements
 
-*{Setup Requirements}*
+* 1. Clone git repository to device you want to run the page on.
+  2. Get an API Key from bikeindex.org
+  3. Set up the environmental variables in a .env file.
+  4. Compile using node, and open the index.html file on the device you want to run the program on.*
 
 
 ## Known Bugs
 
-*{Known Bugs}*
+*Known bugs listed at https://www.github.com/alleyesonme21/bike-index/issues*
 
 ## Support and contact details
 
-*{Contact Details}*
+*Send one of us a message on Github if you have any questions about the app.*
 
 
 ## Technologies Used
 
-*{Technologies Used}*
+*Bootstrap, CSS, Git, HTML, Javascript, Node.js*
 
 ### License
 
@@ -55,9 +57,7 @@ SOFTWARE.
 
 Copyright (c) 2020 ***Johnny Duverseau, Emme Buentiempo, AJ Markow***
 
-## TO DO LIST:
-
-- Brief: Bike Index API
+## Our Prompt:
 
 Build an app using the Bike Index API. Your app could list all the bikes that have been registered as stolen in a given location in the past week. Or it could display statistics - for instance, you could see which manufacturer is most frequently stolen in a given area.
 
