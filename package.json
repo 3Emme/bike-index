@@ -10,10 +10,8 @@
     "test": "jest --coverage"
   },
   "jest": {
-    "collectCoverage": true,
-    "coverageReporters": [
-      "html"
-    ]
+    "collectCoverage": true
+    
   },
   "repository": {
     "type": "git",

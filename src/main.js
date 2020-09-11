@@ -47,14 +47,14 @@ if(bikeResponse.bikes) {
   bikeResponse.bikes.forEach(function(element){
     $('#bikesfound').append(`
     <br>
-    <div class='col-8 justify-content-center'>
+    <div class='col-10 align-items-center'>
     <p class='resultstitle'>🚲 Title: ${element.description}</p>
     <p class='results'>Location Stolen: ${element.stolen_location}</p> 
     <p class='results'>Date Stolen: ${element.date_stolen}</p>
     <p class='results'>Color: ${element.frame_colors.join(' and ')}</p> 
     <p class='results'>Description: ${element.description}</p>
     <p class='results'>Link to page: <A HREF='${element.url}'>${element.url}</A></p>
-    <img style="-webkit-user-select: none;margin: auto;" src="${stolenMap(element.stolen_location)}" width="400" height="400">
+    <img style="-webkit-user-select: none;margin: auto;" src="${MapQuestService.getMap(element.stolen_location)}" width="400" height="400">
     </div>
     </br>`); 
     
@@ -64,16 +64,16 @@ if(bikeResponse.bikes) {
 }
 }
 
-function stolenMap(stolenLocation){
-  if (!stolenLocation){
-    console.log(`stolenLocation is not valid. Value: ${stolenLocation}`)
-  } else{
-    MapQuestService.getMap(stolenLocation)
-          .then(function(mapResponse) {
-            return mapResponse;
-          });
-        } 
-}
+// function stolenMap(stolenLocation){
+//   if (!stolenLocation){
+//     console.log(`stolenLocation is not valid. Value: ${stolenLocation}`)
+//   } else{
+//     MapQuestService.getMap(stolenLocation)
+//           .then(function(mapResponse) {
+//             return mapResponse;
+//           });
+//         } 
+// }
 
   $(document).ready(function() {
 
@@ -84,6 +84,7 @@ $('#bikeindexsubmit').click(function(event) {
     const manufacturer = $('#manufacturer').val();
     const perPage = $('#results').val();
     // clearFields();
+    $('#bikesfound').html("");
     BikeService.getId(color,zipCode,manufacturer,perPage)
       .then(function(bikeResponse) {
         displayBikeResults(bikeResponse);

@@ -21,7 +21,7 @@
 export default class BikeService {  
   static getId(color,zipCode,manufacturer,perPage) {
     console.log(`getId function running. zipCode: ${zipCode},manufacturer: ${manufacturer},perPage: ${perPage}`)
-    return fetch(`https://bikeindex.org/api/v3/search?page=1&query_items%5B%5D=${color}&id=${process.env.ID}&secret=${process.env.SECRET}&location=${zipCode}&manufacturer=${manufacturer}&per_page=${perPage}&distance=10&stolenness=stolen`)
+    return fetch(`https://bikeindex.org/api/v3/search?page=1&query_items%5B%5D=${color}&id=${process.env.ID}&secret=${process.env.SECRET}&location=${zipCode}&manufacturer=${manufacturer}&per_page=${perPage}&distance=10&stolenness=proximity`)
       .then(function(bikeResponse) {
         if (!bikeResponse.ok) {
           console.log(`Error thrown`);

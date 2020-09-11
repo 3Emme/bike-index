@@ -19,12 +19,12 @@
   font-size:25px;
 }
 
-.results{
-  margin-left: 10%;
-  margin-right:10%;
-}
 .resultstitle{
   font-weight:bolder;
+
+}
+#bikesfound{
   margin-left: 10%;
-  margin-right:10%;
+  width: auto;
+  padding: 10px;
 }
